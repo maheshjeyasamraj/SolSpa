@@ -1,0 +1,84 @@
+header {
+  background: url('https://images.pexels.com/photos/3865790/pexels-photo-3865790.jpeg') no-repeat center center / cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+
+#hero {
+  transition: background-image 1s ease-in-out;
+  background-repeat: no-repeat;
+  /* added missing semicolon */
+}
+
+/* Base Setup */
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Top Fixed Icon Bar */
+.top-icon-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+/* Icon Buttons Only */
+.top-icon-bar a {
+  text-decoration: none;
+  color: #5a775e;
+  font-size: 1.2rem;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(90, 119, 94, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  outline-offset: 2px;
+}
+
+/* Hover Effect */
+.top-icon-bar a:hover,
+.top-icon-bar a:focus {
+  background: #5a775e;
+  color: #fff;
+  transform: scale(1.1);
+  will-change: transform;
+  outline: none;
+}
+
+/* Responsive - Stack icons if needed */
+@media (max-width: 600px) {
+  .top-icon-bar {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+}
+.service-card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}

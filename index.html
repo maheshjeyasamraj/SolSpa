@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> SOLSPA – Luxury Spa in Chennai</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .navbar {
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1583337130417-fc74c02c1e2f') no-repeat center center/cover;
+      min-height: 100vh;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content {
+      z-index: 1;
+    }
+
+    .btn-main {
+      background: #cce3dc;
+      color: #000000;
+      padding: 12px 30px;
+      border-radius: 25px;
+      border: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .btn-main:hover {
+      background: 	#634c4c;
+      color:#ffffff
+    }
+
+    .section {
+      padding: 80px 20px;
+    }
+
+    .services i {
+      font-size: 40px;
+      color: #eac7c7;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    .testimonial {
+      background: #f9f5f5;
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    .footer {
+      background: #cce3dc;
+      color: #000000;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .footer a {
+      color: 	#634c4c;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">SOLSPA</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#pricing">Price Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- Hero Section -->
+<header class="hero" id="hero">
+  <div class="hero-content">
+    <h1 class="display-4">Welcome to SOL SPA</h1>
+    <p class="lead">Nourish Your Soul. Elevate Your Senses</p>
+    <a href="#contact" class="btn btn-main mt-3">Book Now</a>
+  </div>
+</header>
+
+
+
+<style>
+.hero {
+  height: 100vh;
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  animation: bgSlide 15s infinite;
+}
+@keyframes bgSlide {
+  0%   { background-image: url('images/hero-bg3.webp'); }
+  33%  { background-image: url('images/hero-bg2.webp'); }
+  66%  { background-image: url('images/hero-bg1.webp'); }
+  100% { background-image: url('images/hero-bg4.webp'); }
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* dark overlay */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+</style>
+
+
+
+
+
+
+
+
+<section style="background-color: #f9f9f9; padding: 20px 20px; text-align: center; margin-top: 30px; " >
+  <div style="max-width: 800px; margin: 0 auto;">
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin-bottom: 20px; color: #2e2e2e;">
+      Step into a Serene Oasis
+    </h2>
+    <p style="font-family: 'DM Sans', sans-serif; font-size: 18px; line-height: 1.4; color: #555;">
+      At <strong>SOL SPA</strong>, we believe in holistic rejuvenation that touches the body, calms the mind, and uplifts the spirit.
+      Explore our carefully curated treatments—from deep tissue massages to rejuvenating facials—all designed to help you recharge and rediscover balance.
+    </p>
+    <div style="margin-top: 30px;">
+      <p style="font-size: 18px; font-weight: 600; color: #4CAF50;">✨ New Guest Offer: Enjoy up to <strong>20% OFF</strong> on your first visit!</p>
+      <p style="font-size: 18px; font-weight: 600; color: #4CAF50;">✨ Memberships now available—<strong>save up to 60%</strong> on your wellness journey!</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<section style="padding: 80px 20px; background-color: #fff; font-family: 'DM Sans', sans-serif;">
+  <div style="max-width: 1200px; margin: 0 auto; text-align: center;" >
+
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 40px; color: #1e1e1e; margin-bottom: 15px;">
+      Nourish Your Soul with <span style="color: #4CAF50;">Holistic Spa Therapies</span>
+    </h2>
+    <p style="font-size: 18px; color: #777; max-width: 700px; margin: 0 auto 60px;">
+      Unwind with curated wellness experiences designed to restore balance, beauty, and inner harmony.
+    </p>
+
+    <div style="
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    ">
+
+      <!-- Massages -->
+      <div class="service-card">
+        <div class="icon"><i class="fas fa-spa"></i></div>
+        <h3>Massages</h3>
+        <p class="quote">“Feel Every Knot Melt Away”</p>
+        <p class="desc">Discover deep relaxation through our signature massages, crafted to heal, soothe, and energize.</p>
+      </div>
+
+      <!-- Body Wraps -->
+      <div class="service-card">
+        <div class="icon"><i class="fas fa-leaf"></i></div>
+        <h3>Body Wraps</h3>
+        <p class="quote">“Wrap Yourself in Pure Indulgence”</p>
+        <p class="desc">Detox and hydrate with botanical-infused body wraps that nourish and refresh your skin.</p>
+      </div>
+
+      <!-- Body Scrubs -->
+      <div class="service-card">
+        <div class="icon"><i class="fas fa-seedling"></i></div>
+        <h3>Body Scrubs</h3>
+        <p class="quote">“Reveal Radiance with Every Scrub”</p>
+        <p class="desc">Buff away stress and dead skin with our rejuvenating scrubs for a luminous glow.</p>
+      </div>
+
+      <!-- Facials -->
+      <div class="service-card">
+        <div class="icon"><i class="fas fa-gem"></i></div>
+        <h3>Facials</h3>
+        <p class="quote">“Glow Beyond Skin Deep”</p>
+        <p class="desc">Revitalize your complexion with personalized facial treatments for lasting hydration and clarity.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+.service-card {
+  background: #fafafa;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+.service-card .icon {
+  font-size: 40px;
+  color: #4CAF50;
+  margin-bottom: 20px;
+}
+.service-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: #222;
+  margin-bottom: 10px;
+}
+.service-card .quote {
+  font-style: italic;
+  color: #66bb6a;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+.service-card .desc {
+  font-size: 15px;
+  color: #555;
+}
+@media (max-width: 768px) {
+  .service-card {
+    padding: 24px;
+  }
+}
+</style>
+
+
+
+
+
+
+
+
+
+<!-- About Section -->
+
+<section class="section text-center" id="about" style="
+  background-image: url('your-image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 20px;
+  font-family: 'DM Sans', sans-serif;
+  position: relative;
+  z-index: 1;
+">
+  <!-- White overlay for readability -->
+  <div style="
+    background-color: rgba(255, 255, 255, 0.92);
+    padding: 60px 30px;
+    border-radius: 12px;
+    max-width: 1200px;
+    margin: 0 auto;
+  ">
+  
+    <div class="container" >
+
+      <!-- Section Heading -->
+      <h2 style="font-family: 'Playfair Display', serif; font-size: 36px; color: #2e2e2e; margin-bottom: 20px; margin-top: -40px;">
+        Rediscover Yourself at <span style="color: #4CAF50;">SOL SPA</span>
+      </h2>
+      <p class="lead" style="font-size: 18px; color: #555; max-width: 800px; margin: 0 auto 50px;">
+        At SOLSPA, we blend traditional Indian wellness practices with a modern luxurious touch. Discover the healing secrets passed down through generations, reimagined for today's lifestyle in the heart of Chennai.
+      </p>
+
+      <!-- Location & Timings -->
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin: 40px 0; text-align: center;">
+        <div style="flex: 1 1 250px;">
+          <p style="font-size: 16px; color: #4CAF50;">📍 Locations</p>
+          <p style="font-size: 15px; color: #555;">Conveniently located in <strong>Chennai</strong></p>
+        </div>
+        <div style="flex: 1 1 250px;">
+          <p style="font-size: 16px; color: #4CAF50;">🕘 Timings</p>
+          <p style="font-size: 15px; color: #555;">Open daily from <strong>10:00 AM to 9:00 PM</strong></p>
+        </div>
+      </div>
+
+      <!-- Treatments Grid -->
+      <div style="margin-bottom: 30px;">
+        <h3 style="font-family: 'Playfair Display', serif; font-size: 28px; color: #2e2e2e; margin-bottom: 10px;">
+          Our Treatments
+        </h3>
+        <p style="font-size: 16px; color: #666;">What We’re Offering</p>
+      </div>
+
+      <div style="
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 30px;
+        text-align: left;
+      ">
+
+        <!-- Facial Care -->
+        <div style="background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+          <h4 style="font-size: 20px; font-family: 'Playfair Display', serif; color: #333;">Facial Care</h4>
+          <p style="font-size: 15px; color: #555;">Your skin is unique — and so is our approach. From anti-aging solutions to organic glow-ups, SOL SPA offers a wide range of facials tailored to your skin’s needs for a healthy, radiant appearance.</p>
+          <a href="#" style="color: #4CAF50; text-decoration: none; font-weight: 500;">Know More →</a>
+        </div>
+
+        <!-- Spa Therapies -->
+        <div style="background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+          <h4 style="font-size: 20px; font-family: 'Playfair Display', serif; color: #333;">Spa Therapies</h4>
+          <p style="font-size: 15px; color: #555;">Experience deep healing and soulful renewal. Our signature therapies blend traditional techniques with modern luxury to offer true holistic wellness.</p>
+          <a href="#" style="color: #4CAF50; text-decoration: none; font-weight: 500;">Know More →</a>
+        </div>
+
+        <!-- Body Scrubs -->
+        <div style="background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+          <h4 style="font-size: 20px; font-family: 'Playfair Display', serif; color: #333;">Body Scrubs</h4>
+          <p style="font-size: 15px; color: #555;">Refresh. Revive. Reveal glowing skin. Choose from a variety of natural exfoliating scrubs, each crafted to detoxify, soften, and energize your skin.</p>
+          <a href="#" style="color: #4CAF50; text-decoration: none; font-weight: 500;">Know More →</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Services Section: Accordion Layout with Full Content -->
+<section class="section bg-light py-5" id="services"  >
+  <div class="container" style="margin-top: 50px;" >
+    <h2 class="text-center mb-4 display-5 fw-bold">Our Signature Spa Services</h2>
+    <p class="text-center text-muted mb-5">Indulge in therapeutic journeys that restore, rejuvenate, and radiate pure bliss</p>
+
+    <div class="accordion" id="spaServicesAccordion">
+
+      <!-- Spa Indulgence -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <i class="fa-solid fa-star me-2 text-warning"></i> Spa Indulgence & Exclusive Therapies
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#spaServicesAccordion">
+          <div class="accordion-body text-muted">
+            <strong>“A Journey of Pure Bliss Awaits”</strong><br />
+            Immerse yourself in the art of well-being with SOL SPA’s indulgent therapies and exclusive experiences.
+            <ul>
+              <li><strong>Avantika Signature Jet Lag Recovery Package</strong> – Revives tired bodies and minds</li>
+              <li><strong>Soulmate Couple Massage</strong> – A deeply nurturing full-body experience for two</li>
+              <li><strong>Four-Hand Massage</strong> – Ultimate harmony with two therapists in perfect rhythm</li>
+            </ul>
+            Whether you're looking to escape the daily grind or reconnect with your inner self, these sessions are your sanctuary.
+          </div>
+        </div>
+      </div>
+
+      <!-- Massages -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <i class="fa-solid fa-hands-bubbles me-2 text-success"></i> Massages
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#spaServicesAccordion">
+          <div class="accordion-body text-muted">
+            <strong>“Healing Hands, Lasting Harmony”</strong><br />
+            Let every stroke and rhythm melt away your tension. Our expertly trained therapists offer a wide range of massage experiences:
+            <ul>
+              <li><strong>Deep Tissue</strong> – For muscle recovery and pain relief</li>
+              <li><strong>Aromatherapy</strong> – To soothe your senses and relax your soul</li>
+              <li><strong>Swedish Classic</strong> – Gentle yet firm rejuvenation</li>
+              <li><strong>Hot Stone</strong>, <strong>Warm Bamboo</strong>, <strong>Herbal Potli Massage</strong> – Ancient wisdom meets modern calm</li>
+              <li><strong>Express Massages (30 min)</strong> – Back, Head-Neck-Shoulder, or Foot Reflexology for focused relief</li>
+            </ul>
+            Each massage is designed to bring balance to your body, mind, and spirit.
+          </div>
+        </div>
+      </div>
+
+      <!-- Body Scrubs & Wraps -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <i class="fa-solid fa-seedling me-2 text-teal"></i> Body Scrubs & Wraps
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#spaServicesAccordion">
+          <div class="accordion-body text-muted">
+            <strong>“Glow Beyond the Surface”</strong><br />
+            Elevate your self-care ritual with SOL SPA’s luxurious body scrubs and detoxifying wraps.
+            <ul>
+              <li><strong>Scrubs:</strong> Mineral Salt, Almond, Neem Tulasi, Turmeric & Basil, Peppermint Cooling</li>
+              <li><strong>Wraps:</strong> Almond Clay Wrap, Rich Mineral Wrap, Mud Detox, Dead Sea Mud Wrap</li>
+            </ul>
+            These treatments are designed to exfoliate, brighten, nourish, detoxify, hydrate, and deeply relax the body — a complete treat for your skin and senses.
+          </div>
+        </div>
+      </div>
+
+      <!-- Spa Facials -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            <i class="fa-solid fa-face-smile-beam me-2 text-pink"></i> Spa Facials
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#spaServicesAccordion">
+          <div class="accordion-body text-muted">
+            <strong>“Where Radiance Begins”</strong><br />
+            At SOL SPA, your skin receives the love it deserves with our premium facials tailored to your skin’s unique needs:
+            <ul>
+              <li><strong>Avantika Signature Facial</strong> – A luxury ritual for glowing, youthful skin</li>
+              <li><strong>Organic Facial</strong> – Pure ingredients for a gentle glow</li>
+              <li><strong>Anti-Aging Facial</strong> – Smooths, firms, and lifts</li>
+              <li><strong>Deep Cleansing Facial</strong> – Clears, refreshes, and detoxifies</li>
+              <li><strong>Fruit Facial</strong> – Nature’s freshness for radiant skin</li>
+            </ul>
+            Choose between 60 or 90-minute sessions—because beauty is not rushed, it’s nurtured.
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- End Accordion -->
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Gallery Section -->
+<section class="section gallery" id="gallery">
+  <div class="container text-center">
+    <h2 class="mb-4">Gallery</h2>
+    <div class="row g-3">
+      <div class="col-md-4"><img src="Interior/Int1.jpeg" alt="Spa 1" /></div>
+      <div class="col-md-4"><img src="Interior/Int2.jpeg" alt="Spa 2" /></div>
+      <div class="col-md-4"><img src="Interior/Int3.jpeg" alt="Spa 3" /></div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<!-- Pricing Section -->
+<section class="section bg-light py-5" id="pricing">
+  <div class="container" style="margin-top: 30px;">
+    <h2 class="text-center mb-4 display-5 fw-bold"> Pricing Menu</h2>
+    <p class="text-center text-muted mb-5">Transparent rates for indulgent, rejuvenating experiences</p>
+
+    <div class="row g-4">
+
+      <!-- Massages & Packages -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-lg h-100">
+          <div class="card-body">
+            <h5 class="card-title text-center fw-bold mb-3">💆‍♂️ Massages & Packages</h5>
+            <ul class="list-unstyled small text-muted">
+              <li><span class="fw-semibold">Deep Tissue Massage:</span> ₹3000 / ₹4300 <span class="text-muted">(60 / 90 mins)</span></li>
+              <li><span class="fw-semibold">Signature Therapy:</span> ₹3200 / ₹4500 <span class="text-muted">(60 / 90 mins)</span></li>
+              <li><span class="fw-semibold">Lomi Lomi Massage:</span> ₹4000 / ₹5500 <span class="text-muted">(60 / 90 mins)</span></li>
+              <li><span class="fw-semibold">Couple’s Massage:</span> Starts from ₹5499</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Facials -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-lg h-100">
+          <div class="card-body">
+            <h5 class="card-title text-center fw-bold mb-3">🧖‍♀️ Facials</h5>
+            <ul class="list-unstyled small text-muted">
+              <li><span class="fw-semibold">Organic Facial:</span> ₹2699 / ₹3699</li>
+              <li><span class="fw-semibold">Anti-Aging Facial:</span> ₹2999 / ₹3999</li>
+              <li><span class="fw-semibold">Signature Facial:</span> ₹2999 / ₹3999</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scrubs & Wraps -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-lg h-100">
+          <div class="card-body">
+            <h5 class="card-title text-center fw-bold mb-3">🛁 Scrubs & Wraps</h5>
+            <ul class="list-unstyled small text-muted">
+              <li><span class="fw-semibold">Body Scrubs:</span> ₹1499 (Single) / ₹2899 (Couple)</li>
+              <li><span class="fw-semibold">Wrap Treatments:</span> ₹1399 – ₹7499 <span class="text-muted">(Based on selection & duration)</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Express Services -->
+      <div class="col-md-12">
+        <div class="card border-0 shadow-lg h-100 mt-3">
+          <div class="card-body">
+            <h5 class="card-title text-center fw-bold mb-3">⚡ Express Services (30 Minutes)</h5>
+            <div class="row text-muted small text-center">
+              <div class="col-md-4 mb-2">
+                <span class="fw-semibold">💆 Head, Neck & Shoulder:</span> ₹1299
+              </div>
+              <div class="col-md-4 mb-2">
+                <span class="fw-semibold">🦶 Foot Reflexology:</span> ₹1499
+              </div>
+              <div class="col-md-4 mb-2">
+                <span class="fw-semibold">🪑 Back Stress Reliever:</span> ₹1299
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- row end -->
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Membership Plans Section -->
+<section class="section bg-white py-5" id="membership">
+  <div class="container">
+    <h2 class="text-center mb-4 display-5 fw-bold"> Membership Plans</h2>
+    <p class="text-center text-muted mb-5">Invest in consistent care and long-term wellness</p>
+
+    <div class="row g-4">
+
+      <!-- Silver -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body text-center">
+            <h5 class="fw-bold text-secondary">🥈 Silver</h5>
+            <p class="text-muted small mb-2">₹15,000</p>
+            <ul class="list-unstyled small text-muted mb-3">
+              <li><strong>8 hours</strong> of spa services</li>
+              <li>Effective rate: ₹1,975/hour</li>
+              <li>Valid for <strong>6 months</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gold -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body text-center">
+            <h5 class="fw-bold text-warning">🥇 Gold</h5>
+            <p class="text-muted small mb-2">₹30,000</p>
+            <ul class="list-unstyled small text-muted mb-3">
+              <li><strong>20 hours</strong> of spa services</li>
+              <li>Effective rate: ₹1,500/hour</li>
+              <li>Valid for <strong>6 months</strong></li>
+              <li class="text-success">🎁 Save 50%</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pearl -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body text-center">
+            <h5 class="fw-bold text-info">💠 Pearl</h5>
+            <p class="text-muted small mb-2">₹50,000</p>
+            <ul class="list-unstyled small text-muted mb-3">
+              <li><strong>40 hours</strong> of spa services</li>
+              <li>Effective rate: ₹1,250/hour</li>
+              <li>Valid for <strong>1 year</strong></li>
+              <li class="text-success">🎁 Save 55%</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Platinum -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body text-center">
+            <h5 class="fw-bold text-primary">🏆 Platinum</h5>
+            <p class="text-muted small mb-2">₹100,000</p>
+            <ul class="list-unstyled small text-muted mb-3">
+              <li><strong>90 hours</strong> of spa services</li>
+              <li>Effective rate: ₹1,111/hour</li>
+              <li>Valid for <strong>1 year</strong></li>
+              <li class="text-success">🎁 Save 60%</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<style>
+  .card:hover {
+    transform: translateY(-4px);
+    transition: all 0.3s ease;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Contact Section -->
+<section class="section text-center" id="contact">
+  <div class="container">
+    <h2 class="mb-4">Contact Us</h2>
+    <p class="mb-4">Ready to book your experience? We're located in the heart of Chennai.</p>
+    <div class="row justify-content-center mb-4">
+      <div class="col-md-8">
+        <iframe src="https://maps.google.com/maps?q=Chennai&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          width="100%" height="300" style="border:0;" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+    <a href="https://wa.me/91XXXXXXXXXX" class="btn btn-main mb-3"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+    <form class="row g-3 justify-content-center mt-3" style="max-width: 600px; margin: auto;">
+      <div class="col-md-6">
+        <input type="text" class="form-control" placeholder="Your Name" required />
+      </div>
+      <div class="col-md-6">
+        <input type="email" class="form-control" placeholder="Email" required />
+      </div>
+      <div class="col-12">
+        <textarea class="form-control" placeholder="Your Message" rows="4" required></textarea>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-main">Send Message</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>&copy; 2025 SOLSPA | All Rights Reserved</p>
+  <div>
+    <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
+    <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
+    <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
